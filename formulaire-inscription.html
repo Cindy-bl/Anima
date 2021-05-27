@@ -1,0 +1,110 @@
+﻿<html lang="fr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Formulaire d'inscription en Javascript</title>
+<link href='mef.css' rel='stylesheet' type='text/css'>
+<script language="javascript" type="text/javascript"> 
+//source du cours qui a permis de réliser le code 
+//https://www.bonbache.fr/formulaire-d-inscription-web-controle-en-javascript-239.html
+//section prévu pour acceuillir du code dans l'HTML
+let b_civil=false; let b_nom=false; let b_prenom=false; let b_date=false; let b_mail=false;var b_mp=false;
+
+function envoyer(){
+	if(b_civil==true && b_nom==true && b_prenom==true && b_date==true && b_mail==true && b_mp==true){
+		document.getElementById('inscription').innerText = 'Envoie serveur';
+	}else{
+		document.getElementById('message').innerText = "Le formulaire n'est pas complet";
+	}
+	document.getElementById('message').innerText += '-' + b_civil + '-' + b_nom + '-' + b_prenom + '-' + b_date + '-' + b_mail + '-' + b_mp;
+}//Je déclare 6 variables (correspondant à chaque controle de notre formulaire)
+//On initialise 'False' pour nous indiquer quand c'est pas validé ou qu'il ne peut pas être soumis
+/*Nous utilisons 'if' afin de vérifier que toutes les variables sont true
+On utilise la méthode submit désigné par son identifiant 'getElementById' de l'objet 'document' qui permet de soumettre notre formulaire avec toutes ses données*/
+</script>
+<script language="javascript" src="v_inscr.js"></script>
+</head>
+<body class="body">
+
+	<div class="div_conteneur_parent">
+	
+		<div class="div_conteneur_page">		
+			<div class="titre_page"><h1>Formulaire d'inscription Web</h1></div>
+			
+			<div class="div_int_page">
+			
+			<div class="div_saut_ligne">
+			</div>						
+			
+			<div style="float:left;width:10%;height:40px;"></div>
+			<div style="float:left;width:80%;height:40px;text-align:center;">
+			<div id="GTitre">
+			<h1>Formulaire d'inscription contrôlé côté Client</h1>
+			</div>
+			</div>
+			<div style="float:left;width:10%;height:40px;"></div>
+			
+			<div class="div_saut_ligne" style="height:60px">
+			</div>
+			
+			<div style="width:100%;height:auto;text-align:center;">
+			
+			<div style="width:800px;display:inline-block;" id="conteneur">
+				<div id="centre">
+				<div id="message">
+				Tous les champs sont obligatoires
+				</div>
+					<form id="inscription" name="inscription" method="post" action="formulaire-inscription.html"> <!--Délimite la zone du formulaire, elle permet donc de choisir quel valeurs sont à transmettre (d'où l'attribut 'method')
+					L'attribut action lui permet de désigner la page à appeler pour le traitement des données postées, si la même page ('formulaire-inscription.html') est lié c'est parce-que pour les données soit receptionné et traités au rechargement-->
+						<div class="div_input_form">
+							<select id="civilite" name="civilite" onchange='Javascript:if(this.value>0){b_civil=true;}else{b_civil=false;}'> <!--si la valeur ne vaut plus 0 la variable donne 'True' signifiant que le choix de la civilité a correctement été réalisé-->
+								<option value="0">Civilité</option>
+								<option value="1">Madame</option>
+								<option value="2">Monsieur</option>
+							</select>
+						</div>					
+						<div class="div_input_form">
+							<input type="text" name="nom" id="nom" maxlength="50" class="input_form" value='Votre nom' onclick="saisie('Votre nom',this.id)" onmouseout="retablir('Votre nom',this.id)"onblur="mev('Votre nom',this.id)" />
+						</div>
+						<div class="div_input_form">
+							<input type="text" name="prenom" id="prenom" maxlength="50" class="input_form" value='Votre prénom' onclick="saisie('Votre prénom',this.id)" onmouseout="retablir('Votre prénom',this.id)"onblur="mev('Votre prénom',this.id)" />
+						</div>
+						<div class="div_input_form">
+							<input type="text" name="date_n" id="date_n" maxlength="50" class="input_form" value='Naissance, ex : 19/04/1996' onclick="saisie('Naissance, ex : 19/04/1996',this.id)" onmouseout="retablir('Naissance, ex : 19/04/1996',this.id)"onblur="mev('Naissance, ex : 19/04/1996',this.id)" />
+						</div>
+						<div class="div_input_form">
+							<input type="text" name="mail_inscr" id="mail_inscr" maxlength="150" class="input_form" value='Votre mail' onclick="saisie('Votre mail',this.id)" onmouseout="retablir('Votre mail',this.id)"onblur="mev('Votre mail',this.id)"/>
+						</div>
+						<div class="div_input_form">
+							<input type="text" name="cmail_inscr" id="cmail_inscr" maxlength="150" class="input_form" value='Confirmer le mail' onclick="saisie('Confirmer le mail',this.id)" onmouseout="retablir('Confirmer le mail',this.id)"onblur="mev('Confirmer le mail',this.id)" />
+						</div>
+						<div class="div_input_form">
+							Votre mot de passe : entre 5 et 10 caractères<br />
+							<input type="password" name="mp_inscr" id="mp_inscr" maxlength="10" class="input_form" value="Mot de passe" onclick="saisie('Mot de passe',this.id)" onmouseout="retablir('Mot de passe',this.id)"onblur="mev('Mot de passe',this.id)" />
+						</div>
+						<div class="div_input_form">
+							Confirmer le mot de passe :<br />
+							<input type="password" name="mp_conf" id="mp_conf" maxlength="10" class="input_form" value="Confirmer MP" onclick="saisie('Confirmer MP',this.id)" onmouseout="retablir('Confirmer MP',this.id)"onblur="mev('Confirmer MP',this.id)" /><!--'onclick' appelle la fonction saisie, et son identifiant (this.id) en paramètre,
+							'onmouseout' appelle la fonction retablir avec les deux mêmes paramètres,
+							'onblur' se déclenche lorsque le contrôle qui était actif est considéré comme validé, 
+							La fonction 'mev' toujours avec les mêmes paramètres sert à vérifier a saisie du contrôle concerné pour valider (bool = true)|| la réfuter (bool = False)-->
+						</div>							
+						<div class="div_input_form">
+							<input type="button" name="valid_inscr" id="valid_inscr" class="input_form" value="Valider" onclick="envoyer()"/> 
+						</div>	
+					</form>			
+				</div>
+			</div>
+			
+			</div>
+			
+			</div>
+		</div>
+	
+	</div>
+	
+</body>
+<script type="text/javascript" language="javascript">
+	//alert(document.getElementById("civilite").value);
+</script>
+</html>
+	

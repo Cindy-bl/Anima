@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="vendor/css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Anima</title>
+
+    <!-- Partie du Formulaire d'inscription -->
+    <link href="mef.css" rel="stylesheet" tyope="text/css" />
+    <script language="javascript" type="text/javascript">
+      //source du cours qui a permis de réliser le code
+      //https://www.bonbache.fr/formulaire-d-inscription-web-controle-en-javascript-239.html
+      //section prévu pour acceuillir du code dans l'HTML
+      let b_civil = false;
+      let b_nom = false;
+      let b_prenom = false;
+      let b_date = false;
+      let b_mail = false;
+      var b_mp = false;
+
+      function envoyer() {
+        if (
+          b_civil == true &&
+          b_nom == true &&
+          b_prenom == true &&
+          b_date == true &&
+          b_mail == true &&
+          b_mp == true
+        ) {
+          document.getElementById("inscription").innerText = "Envoie serveur";
+        } else {
+          document.getElementById("message").innerText =
+            "Le formulaire n'est pas complet";
+        }
+        document.getElementById("message").innerText +=
+          "-" +
+          b_civil +
+          "-" +
+          b_nom +
+          "-" +
+          b_prenom +
+          "-" +
+          b_date +
+          "-" +
+          b_mail +
+          "-" +
+          b_mp;
+      } //Je déclare 6 variables (correspondant à chaque controle de notre formulaire)
+      //On initialise 'False' pour nous indiquer quand c'est pas validé ou qu'il ne peut pas être soumis
+      /*Nous utilisons 'if' afin de vérifier que toutes les variables sont true
+On utilise la méthode submit désigné par son identifiant 'getElementById' de l'objet 'document' qui permet de soumettre notre formulaire avec toutes ses données*/
+    </script>
+    <script language="javascript" src="v_inscr.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="Anima">Anima</h1>
+      <i class="ion-ios-paw"></i>
+
+      <nav>
+        <ul>
+          <li><a href="#h2propos">À propos</a></li>
+          <li><a href="#h2contexte">Contexte</a></li>
+          <li><a href="#h2possibilities">Nos possibilités</a></li>
+          <li><a href="#h2reservation">Inscription</a></li>
+          <li><a href="#h2contact">Nous contacter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <img
+        class="plage"
+        src="img/plage.jpg"
+        alt="Une image du Sillon à Saint-malo"
+      />
+
+      <!--#################################################### Qui sommes ce que nous faisons ##################################################################-->
+      <a href="#Anima"><i class="ion-chevron-up" alt="up_arrow"></i></a>
+      <section class="propos">
+        <h2 id="h2propos">À propos</h2>
+
+        <p class="ppropos">
+          Nous sommes une équipe unie qui propose des services d'accompagnement
+          à la vie sociale pour les personnes âgées désireuses d'égayer leur
+          quotidien. Grâce au partenariat que nous entretenons avec la SPA de
+          Saint-malo et la garde d'animaux que nous avons mit en place, nous
+          pouvons offrir aux personnes que nous venons visiter la possibilité de
+          passer du temps avec un chien ou un chat.
+        </p>
+        <p class="ppropos2">
+          Si vous nous confiez votre animal, il pourra ainsi sociabiliser,
+          profiter du grand air et participer à une bonne action!
+        </p>
+        <p class="ppropos3">
+          Si vous souhaitez participer au projet ou être seulement informé par
+          nos actualités, vous pouvez vous inscrire sur notre site en cliquant
+          sur le lien Inscrition.
+        </p>
+      </section>
+      <!--#################################################### Contexte 1 #################################################################################-->
+      <section class="contexte">
+        <h2 id="h2contexte">Mise en contexte</h2>
+
+        <p class="pcontext">
+          En cette période de pandémie de la Covid-19, nos aïeux sont bien plus
+          vulnérables qu'en temps normal. Il est nécessaire d'être attentif; le
+          risque de solitude est quelque chose que nous devons réaliser. C'est
+          le retour naturel et dû de l'amour qu'ils nous ont apportés pendant
+          toutes ces années. Parallèlement à cela, beaucoup de gens partent en
+          vacance en ne sachant pas quoi faire de leurs animaux. Nous avons
+          trouvé qu'il serait dommage de ne pas tenter de faire quelque chose
+          d'utile en prenant ces deux paramètres en compte. La SPA a déjà ouvert
+          un service de garde à domicile qui consiste à une personne agée de
+          venir s'occuper de votre animal durant votre absence. Mais nous
+          voulons que les personnes qui ne sont pas autonomes, ou qui ne
+          souhaitent pas se rendre à la SPA puissent également profiter de la
+          compagnie de l'un de nos accompagnateurs et de la présence d'un
+          animal.
+        </p>
+        <img
+          class="imagefemme"
+          src="img/femmechien.png"
+          alt="Femme âgée avec un chien"
+        />
+        <img
+          class="imagehomme"
+          src="img/hommechien.png"
+          alt="Homme âgé avec un chien"
+        />
+        <img
+          class="repas"
+          src="img/repas.png"
+          alt="Une employée sert un repas"
+        />
+      </section>
+      <!--#################################################### Contexte 2 #################################################################################-->
+      <section class="solution">
+        <h3 class="solu">Notre solution...</h3>
+
+        <p>
+          En effet, la compagnie d’un animal est stimulante pour le cerveau.
+          Elle contribue à se repérer dans le temps grâce au rythme régulier de
+          vie de son compagnon. Elle favorise donc le lien avec la vie réelle et
+          l’ancrage dans le présent. Les animaux nous permettent de créer des
+          liens qui nous apportent du réconfort, un sentiment de sécurité et le
+          contact nécessaire à l’épanouissement.Avoir un animal auprès de soi,
+          c’est rester actif ! Par la balade ou les jeux, les personnes âgées
+          peuvent pratiquer la marche, se mouvoir et rester en forme. <br />
+          Et si en plus, nous pouvons contribuer à inverser la tendance
+          d’abandon des animaux en période de vacances, et participer à balader
+          les animaux de la SPA avec laquelle nous sommes en partenariat, nous
+          avons tout gagné !
+        </p>
+      </section>
+      <section class="possibilities">
+        <h2 id="h2possibilities">
+          Nos possibilités dans l'accompagnement sont nombreuses
+        </h2>
+
+        <p>
+          Les visites se font sur Saint-malo. Vous pouvez réserver par téléphone
+          ou via notre site web. L'un de nos accompagnateurs viendra vous rendre
+          visite avec un animal.
+        </p>
+
+        <h4 class="pro">Nos promesses :</h4>
+
+        <p class="promesses">
+          Vous pourrez vous balader, discuter, faire des jeux, vous amuser,
+          regarder des émissions en bonne compagnie ou vous occuper d'un animal.
+          Notre personnel n'est cependant pas habilité à effectuer des toilettes
+          ou du ménage.
+        </p>
+      </section>
+
+      <!--#################################################### IMAGES #################################################################################-->
+      <section></section>
+
+      <section class="reservation">
+        <h2 id="h2reservation">Inscription</h2>
+        <!-- <img class="imgreserv" src="img/femmechat.png" alt="Femme âgée avec un chat" /> -->
+        <div class="div_conteneur_parent body">
+          <div class="div_conteneur_page">
+            <div class="div_int_page">
+              <div class="div_saut_ligne"></div>
+
+              <div style="float: left; width: 10%; height: 40px"></div>
+              <div
+                style="
+                  float: left;
+                  width: 80%;
+                  height: 40px;
+                  text-align: center;
+                "
+              >
+                <div id="GTitre">
+                  <h1 class="onze">Formulaire d'inscription Anima</h1>
+                </div>
+              </div>
+              <div style="float: left; width: 10%; height: 40px"></div>
+
+              <div class="div_saut_ligne" style="height: 60px"></div>
+
+              <div style="width: 100%; height: auto; text-align: center">
+                <div style="width: 800px; display: inline-block" id="conteneur">
+                  <div id="centre">
+                    <div id="message">Tous les champs sont obligatoires</div>
+                    <form
+                      id="inscription"
+                      name="inscription"
+                      method="post"
+                      action="formulaire-inscription.html"
+                    >
+                      <!--Délimite la zone du formulaire, elle permet donc de choisir quel valeurs sont à transmettre (d'où l'attribut 'method')
+                        L'attribut action lui permet de désigner la page à appeler pour le traitement des données postées, si la même page ('formulaire-inscription.html') est lié c'est parce-que pour les données soit receptionné et traités au rechargement-->
+                      <div class="div_input_form">
+                        <select
+                          id="civilite"
+                          name="civilite"
+                          onchange="Javascript:if(this.value>0){b_civil=true;}else{b_civil=false;}"
+                        >
+                          <!--si la valeur ne vaut plus 0 la variable donne 'True' signifiant que le choix de la civilité a correctement été réalisé-->
+                          <option value="0">Civilité</option>
+                          <option value="1">Madame</option>
+                          <option value="2">Monsieur</option>
+                        </select>
+                      </div>
+                      <div class="div_input_form">
+                        <input
+                          type="text"
+                          name="nom"
+                          id="nom"
+                          maxlength="50"
+                          class="input_form"
+                          value="Votre nom"
+                          onclick="saisie('Votre nom',this.id)"
+                          onmouseout="retablir('Votre nom',this.id)"
+                          onblur="mev('Votre nom',this.id)"
+                        />
+                      </div>
+                      <div class="div_input_form">
+                        <input
+                          type="text"
+                          name="prenom"
+                          id="prenom"
+                          maxlength="50"
+                          class="input_form"
+                          value="Votre prénom"
+                          onclick="saisie('Votre prénom',this.id)"
+                          onmouseout="retablir('Votre prénom',this.id)"
+                          onblur="mev('Votre prénom',this.id)"
+                        />
+                      </div>
+                      <div class="div_input_form">
+                        <input
+                          type="text"
+                          name="date_n"
+                          id="date_n"
+                          maxlength="50"
+                          class="input_form"
+                          value="Naissance, ex : 19/04/1996"
+                          onclick="saisie('Naissance, ex : 19/04/1996',this.id)"
+                          onmouseout="retablir('Naissance, ex : 19/04/1996',this.id)"
+                          onblur="mev('Naissance, ex : 19/04/1996',this.id)"
+                        />
+                      </div>
+                      <div class="div_input_form">
+                        <input
+                          type="text"
+                          name="mail_inscr"
+                          id="mail_inscr"
+                          maxlength="150"
+                          class="input_form"
+                          value="Votre mail"
+                          onclick="saisie('Votre mail',this.id)"
+                          onmouseout="retablir('Votre mail',this.id)"
+                          onblur="mev('Votre mail',this.id)"
+                        />
+                      </div>
+                      <div class="div_input_form">
+                        <input
+                          type="text"
+                          name="cmail_inscr"
+                          id="cmail_inscr"
+                          maxlength="150"
+                          class="input_form"
+                          value="Confirmer le mail"
+                          onclick="saisie('Confirmer le mail',this.id)"
+                          onmouseout="retablir('Confirmer le mail',this.id)"
+                          onblur="mev('Confirmer le mail',this.id)"
+                        />
+                      </div>
+                      <div class="div_input_form">
+                        Votre mot de passe : entre 5 et 10 caractères<br />
+                        <input
+                          type="password"
+                          name="mp_inscr"
+                          id="mp_inscr"
+                          maxlength="10"
+                          class="input_form"
+                          value="Mot de passe"
+                          onclick="saisie('Mot de passe',this.id)"
+                          onmouseout="retablir('Mot de passe',this.id)"
+                          onblur="mev('Mot de passe',this.id)"
+                        />
+                      </div>
+                      <div class="div_input_form">
+                        Confirmer le mot de passe :<br />
+                        <input
+                          type="password"
+                          name="mp_conf"
+                          id="mp_conf"
+                          maxlength="10"
+                          class="input_form"
+                          value="Confirmer MP"
+                          onclick="saisie('Confirmer MP',this.id)"
+                          onmouseout="retablir('Confirmer MP',this.id)"
+                          onblur="mev('Confirmer MP',this.id)"
+                        /><!--'onclick' appelle la fonction saisie, et son identifiant (this.id) en paramètre,
+                                'onmouseout' appelle la fonction retablir avec les deux mêmes paramètres,
+                                'onblur' se déclenche lorsque le contrôle qui était actif est considéré comme validé, 
+                                La fonction 'mev' toujours avec les mêmes paramètres sert à vérifier a saisie du contrôle concerné pour valider (bool = true)|| la réfuter (bool = False)-->
+                      </div>
+                      <div class="div_input_form">
+                        <input
+                          type="button"
+                          name="valid_inscr"
+                          id="valid_inscr"
+                          class="input_form"
+                          value="Valider"
+                          onclick="envoyer()"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h2 id="h2contact">Nous contacter</h2>
+
+      <ul class="contact">
+        <li><i class="ion-android-call"></i>Numéro: 02.99.98.01.00</li>
+        <li><i class="ion-ios-email"></i>Email: anima@asso.com</li>
+      </ul>
+
+      <ul class="copy">
+        <li>Partenariat: La spa de saint-malo, Appel médical</li>
+        <li>&#169;Copyright</li>
+        
+      </ul>
+      <img class="logoanima" src="img/anima(1).svg" alt="logoAnima" />
+    </footer>
+  </body>
+</html>

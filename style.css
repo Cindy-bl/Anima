@@ -1,0 +1,389 @@
+* {
+  /*page web*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Bords entre le margin et padding*/
+  outline: none; /* 0 bordure padding et marging*/
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none; /* 0 soulignement*/
+}
+
+/* paraghraphes et titres*/
+p, li, a {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  color: #334d63;
+  
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 25px;
+  font-family: "Noto Serif", serif;
+  color: #334d63;;
+}
+/*haut du site*/
+header {
+  position: absolute;
+  width: 1088px;
+  height: 307px;
+  left: 50%;
+  top: 129px;
+  background: #ffffff;
+  border: 1px solid #334d63;
+  box-sizing: border-box;
+  border-radius: 40px;
+  transform: translate(-50%);
+}
+
+
+.ion-ios-paw {
+  color: #ffa83e;
+  font-size: 100px;
+  margin-left: 69%;
+}
+
+.plage {
+  width: 100%;
+}
+
+header nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 5%;
+  font-size: 20px;
+  transition: all 0.7s;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #334d63;
+}
+
+header nav ul li:hover {
+  transform: scale(1.2);
+}
+header nav ul li a:hover {
+  text-decoration: underline #ffa83e;
+}
+
+nav {
+  position: absolute;
+  transform: translate(-50%);
+  width: 90%;
+  height: 118px;
+  left: 50%;
+  top: 50%;
+  background: #e7e5e5;
+}
+
+header h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 112px;
+  color: #334d63;
+}
+/*Première section*/
+
+.propos {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  left: 50%;
+  top: 110%;
+  transform: translate(-50%);
+  background: #e7e5e5;
+  border: 3px solid #6d7b87;
+  box-sizing: border-box;
+  text-align: justify;
+  left: 50%;
+}
+#h2propos {
+  text-align: center;
+  padding: 2% 2% 2% 2%;
+  width: 50%;
+  margin-left: 22%;
+  margin-top: 5%;
+}
+.ppropos {
+  text-indent: 5%;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 4%;
+}
+.ppropos2 {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  padding: 5% 2% 2% 0%;
+  margin-left: 19%;
+  width: 65%;
+}
+
+.ppropos3{
+
+    margin-top: -2%;
+    padding-left: 5%;
+}
+
+/*Deuxième section*/
+.contexte {
+  position: absolute;
+  margin-top: 60%;
+  height: 100vh;
+  width: 100%;
+}
+.divcontext {
+  transform: translate(-50%);
+  width: 40%;
+  margin-left: 35%;
+  margin-top: 20%;
+  text-align: center;
+}
+#h2contexte {
+  width: 40%;
+  text-align: center;
+  margin-left: 29%;
+  margin-top: -10%;
+  padding-top: 3%;
+}
+
+.imagefemme {
+  margin-top: 2%;
+  margin-left: 20%;
+  padding-top: 2%;
+}
+
+.pcontext {
+  text-indent: 5%;
+  text-align: justify;
+  padding-top: 4%;
+  line-height: 19px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.imagefemme,
+.imagehomme,
+.repas {
+  width: 20%;
+  margin-bottom: 5%;
+}
+.repas {
+  height: 180px;
+}
+
+/*Troisième section*/
+.solution {
+  width: 80%;
+  margin-top: 95%;
+  border: solid;
+  text-align: justify;
+  background: #e7e5e5;
+  margin-left: 10%;
+}
+
+.solution p {
+  text-indent: 5%;
+  width: 80%;
+  margin-left: 10%;
+  padding-bottom: 10%;
+  line-height: 19px;
+}
+.solu {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  margin-left: 10%;
+}
+
+.possibilities {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+  url(img/rename.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 5%;
+  padding-left: 18%;
+  height: 110vh;
+}
+
+.possibilities p {
+  width: 60%;
+  text-align: justify;
+  text-indent: 5%;
+  padding-bottom: 3%;
+}
+#h2possibilities {
+  padding-top: 15%;
+  padding-bottom: 2%;
+}
+.promesses {
+  padding-bottom: 2%;
+  margin-top: 2%;
+}
+.pro {
+  margin-top: 8%;
+}
+
+/*Quatrième section*/
+#h2reservation {
+  margin-right: 15px;
+  margin-bottom: 9%;
+  text-align: center;
+}
+.imgreserv {
+  width: 20%;
+  margin-left: 70%;
+  margin-top: -5%;
+}
+.preservation {
+  margin-top: -30%;
+}
+.reservation {
+  height: 100vh;
+}
+/*Footer*/
+footer {
+  height: 20vh;
+  width: 100%;
+  background-color: #334d63;
+}
+footer li {
+  color: white;
+}
+.contact {
+  position: absolute;
+  text-align: left;
+  line-height: 120%;
+  margin-left: 10%;
+  width: 25%;
+}
+.copy {
+  position: absolute;
+  margin-left: 70%;
+  line-height: 120%;
+  width: 25%;
+}
+
+.ion-android-call,
+.ion-ios-email {
+  color: white;
+  margin-right: 2%;
+}
+
+.ion-chevron-up {
+  color: white;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  line-height: 50px; 
+  text-align: center; 
+  cursor: pointer; 
+  background: #ffa83e;
+  border-radius: 50%; 
+  transition: transform 0.7s, box-shadow 0.7s; 
+  z-index: 1;
+}
+
+.ion-chevron-up:hover {
+  transform: scale(
+    1.5
+  ); 
+  box-shadow: 5px 30px 10px #334d63;
+}
+
+.logoanima {
+  width: 9%;
+  margin-top: -2%;
+  margin-left: 44%;
+  padding-bottom: -40%;
+}
+
+
+
+
+
+/*QUERIES*/
+@media only screen and (min-width: 1024px) and (max-width: 1260px) {
+
+
+    .contexte{
+        margin-top: 50%;
+        margin-left: -9%;
+    }
+    .solution{
+        margin-top: 90%;
+        width: 60%;
+        margin-left: 12%;
+    }
+    .repas{
+        height: 28%;
+    }
+    header{
+        width: 60%;
+        margin-left: -10%;
+    }
+    header nav ul li{
+        margin: 3%;
+        margin-top: 8%;
+    }
+    .propos{
+        margin-top: -25%;
+        width: 60%;
+        margin-left: -9%;
+    }
+    .possibilities{
+        width: 82.5%;
+        height: 50%;
+    }
+    #h2possibilities, .pro{
+        margin-left: -5%;
+    }
+    .reservation{
+        width: 60%;
+    }
+
+
+    
+}
+
+/*SMALL PHONE TO BIG TABLETS FROM 768 TO 1023PX*/
+@media only screen and (max-width:1023px){
+    .plage{
+        width: 121%;
+    }
+    header{
+        width: 80%;
+        margin-left: 10%;
+    }
+    header nav ul li{
+        margin: 2%;
+        margin-top: 9%;
+        
+    }
+    .propos{
+        margin-left: 10%;
+    }
+    .contexte{
+        margin-left: 10%;
+        margin-top: 80%;
+    }
+    .solution{
+        margin-left: 20%;
+        margin-top: 145%;    }
+
+    .possibilities{
+        margin-left: 18%;
+    }
+
+}
