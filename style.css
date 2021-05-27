@@ -207,7 +207,7 @@ header h1 {
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-  url(../img/rename.jpg);
+  url(img/rename.jpg);
   background-attachment: fixed;
   background-size: cover;
   margin-top: 5%;
